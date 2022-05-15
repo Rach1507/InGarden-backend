@@ -1,4 +1,4 @@
-package com.onetrust.ecommerce.dto;
+package com.onetrust.ecommerce.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

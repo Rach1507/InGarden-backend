@@ -1,4 +1,7 @@
-package com.onetrust.ecommerce.dto;
+package com.onetrust.ecommerce.models;
+
+import com.onetrust.ecommerce.models.CartItem;
+import com.onetrust.ecommerce.models.User;
 
 import javax.persistence.*;
 import java.util.List;

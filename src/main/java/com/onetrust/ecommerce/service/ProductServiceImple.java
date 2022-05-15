@@ -1,7 +1,6 @@
 package com.onetrust.ecommerce.service;
 
-import com.onetrust.ecommerce.ProductNotFoundException;
-import com.onetrust.ecommerce.dto.Product;
+import com.onetrust.ecommerce.models.Product;
 import com.onetrust.ecommerce.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -60,6 +59,11 @@ public class ProductServiceImple implements ProductService {
 
 
         return productRepository.save(oldProdcut);
+    }
+
+    @Override
+    public List<Product> getProductByCategory(String cat_id) {
+        return productRepository.getProductByCategoryId(cat_id);
     }
 }
 //    public void testSave(){

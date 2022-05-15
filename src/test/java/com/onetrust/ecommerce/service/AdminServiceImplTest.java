@@ -1,12 +1,10 @@
 package com.onetrust.ecommerce.service;
 
-import com.onetrust.ecommerce.dto.User;
+import com.onetrust.ecommerce.models.User;
 import com.onetrust.ecommerce.repository.UserRepository;
-import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.ArrayList;
 
@@ -32,19 +30,16 @@ class AdminServiceTest {
 User user1 = new User("Rach",
                 "Mysore",
                 "9898989",
-                new ArrayList<>(),
-                new ArrayList<>(),
+
                 "rach@gmail.com",
-                " 1234",
                 "admin");
 
         User user2 = new User("test",
                 "Mysore",
                 "9898989",
-                new ArrayList<>(),
-                new ArrayList<>(),
+
                 "rach@gmail.com",
-                " 1234",
+
                 "admin");
 
 

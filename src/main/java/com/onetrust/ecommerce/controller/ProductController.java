@@ -1,12 +1,11 @@
 package com.onetrust.ecommerce.controller;
 
-import com.onetrust.ecommerce.dto.Product;
+import com.onetrust.ecommerce.models.Product;
 import com.onetrust.ecommerce.service.ProductServiceImple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController
@@ -35,16 +34,21 @@ public class ProductController {
     public void deleteProduct(@PathVariable("id") Long pid){
         productService.deleteProduct(pid);
    }
-//
+
   @PostMapping("/add")
     public Long addProduct(@RequestBody Product product){
         return productService.createProduct(product);
   }
-//
+
     @PutMapping("/{id}")
     public Product updateProduct(@PathVariable("id")  Long id ,@RequestBody Product product){
 
         return productService.updateProduct(id,product);
+    }
+
+    @GetMapping("/categories/{id}")
+    public List<Product> getProductsByCategory(@PathVariable("id") String cat_id){
+        return  productService.getProductByCategory(cat_id);
     }
 
 }

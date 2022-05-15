@@ -1,5 +1,7 @@
-package com.onetrust.ecommerce.dto;
+package com.onetrust.ecommerce.models;
 
+import com.onetrust.ecommerce.models.Product;
+import com.onetrust.ecommerce.models.User;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;

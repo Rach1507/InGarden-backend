@@ -1,20 +1,11 @@
 package com.onetrust.ecommerce.service;
 
-import com.onetrust.ecommerce.dto.CartItem;
-import com.onetrust.ecommerce.dto.Product;
+import com.onetrust.ecommerce.models.Product;
 import com.onetrust.ecommerce.repository.ProductRepository;
-import com.onetrust.ecommerce.repository.UserRepository;
-import org.assertj.core.api.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.skyscreamer.jsonassert.JSONAssert;
-import org.skyscreamer.jsonassert.JSONCompare;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.junit.jupiter.api.Assertions.*;
 

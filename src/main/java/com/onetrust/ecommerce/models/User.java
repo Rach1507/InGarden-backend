@@ -1,11 +1,7 @@
-package com.onetrust.ecommerce.dto;
-
-import org.springframework.hateoas.RepresentationModel;
+package com.onetrust.ecommerce.models;
 
 import javax.persistence.*;
 import java.util.List;
-
-import static javax.persistence.CascadeType.ALL;
 
 @Entity
 @Table(name = "users")
@@ -18,42 +14,22 @@ public class User  {
     private String u_name;
     private String u_address;
     private String u_phone;
-
-    @OneToMany(mappedBy = "user")
-    private List<CartItem> cart_items;
-
-    @OneToMany(mappedBy = "user")
-    private List<Order> order_history;
-
     private String u_email;
-    private String u_password;
     private String user_permission;
 
 
-
-
-    public User(String u_name, String u_address, String u_phone, List<CartItem> cart_items, List<Order> order_history, String u_email, String u_password, String user_permission) {
+    public User(String u_name, String u_address, String u_phone, String u_email,  String user_permission) {
 
         this.u_name = u_name;
         this.u_address = u_address;
         this.u_phone = u_phone;
-        this.cart_items = cart_items;
-        this.order_history = order_history;
         this.u_email = u_email;
-        this.u_password = u_password;
         this.user_permission = user_permission;
     }
 
 
 
 
-    public List<Order> getOrder_history() {
-        return order_history;
-    }
-
-    public void setOrder_history(List<Order> order_history) {
-        this.order_history = order_history;
-    }
 
     public String getU_email() {
         return u_email;
@@ -63,13 +39,13 @@ public class User  {
         this.u_email = u_email;
     }
 
-    public String getU_password() {
-        return u_password;
-    }
-
-    public void setU_password(String u_password) {
-        this.u_password = u_password;
-    }
+//    public String getU_password() {
+//        return u_password;
+//    }
+//
+//    public void setU_password(String u_password) {
+//        this.u_password = u_password;
+//    }
 
     public String getUser_permission() {
         return user_permission;
@@ -92,12 +68,6 @@ public class User  {
     public User() {
     }
 
-    public User(String uname, String uaddress, String uphone, List<CartItem> car_items) {
-        u_name = uname;
-        u_address = uaddress;
-        u_phone = uphone;
-//        this.cart_items = car_items;
-    }
 
     public int getUid() {
         return uid;
@@ -128,13 +98,43 @@ public class User  {
         this.u_phone = u_phone;
     }
 
-    public List<CartItem> getCart_items() {
-        return cart_items;
-    }
-
-    public void setCart_items(List<CartItem> cart_items) {
-        this.cart_items = cart_items;
-    }
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        private String u_password;
+//    @OneToMany(mappedBy = "user")
+//    private List<CartItem> cart_items;
+//
+//    @OneToMany(mappedBy = "user")
+//    private List<Order> order_history;
+
+//    public List<CartItem> getCart_items() {
+//        return cart_items;
+//    }
+//
+//    public void setCart_items(List<CartItem> cart_items) {
+//        this.cart_items = cart_items;
+//    }
+
+
+//    public List<Order> getOrder_history() {
+//        return order_history;
+//    }
+//
+//    public void setOrder_history(List<Order> order_history) {
+//        this.order_history = order_history;
+//    }
+
